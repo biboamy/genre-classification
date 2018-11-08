@@ -78,7 +78,7 @@
                     <div id="abstract" class="tm-content-box">
                         <div class="pad flex-item tm-team-description-container">
                             <h2 class="tm-section-title">Description</h2>
-                            <p>In this project, we focus on both music genre and subgenre tagging. For example, given a song from Charlie Parker, except for telling us the song is belong to Jazz, the model will also tell us the song is belong to Swing and Bebop. Subgenre tagging is important for not only music recommendation, but also hit song prediction and many retrieval problems. However, little work has been done to subgenre tagging. In this work, we combine <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD) </a>and KK-genre Dataset(private dataset) to train a <a href="#model">convolutional neural network</a> for genre/subgenre tagging. Our training data can be divided into six genre categories and twenty-four subgenre categories. More statistic result can be found <a href="#dataset">here</a>. </p>
+                            <p>In this project, we focus on both music genre and subgenre tagging. For example, given a song from Charlie Parker, except for telling us the song is belong to Jazz, the model will also tell us the song is belong to Swing and Bebop. Subgenre tagging is important for not only music recommendation, but also hit song prediction and many retrieval problems. However, little work has been done to subgenre tagging. In this work, we combine <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset(MSD) </a>and KKBOX private genre Dataset to train a <a href="#model">convolutional neural network</a> for genre/subgenre tagging. Our training data can be divided into six genre categories and twenty-four subgenre categories. More statistic result can be found <a href="#dataset">here</a>. </p>
                             
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                 <section id="model" class="tm-content-box">
                     <div class='container pad'>
                         <h2>Model Structure</h2>
-                        Two model structures are used here for the genre taggings. We extract the highlight(HL) 30 seconds of each song by using <a href="https://transactions.ismir.net/articles/10.5334/tismir.14/">HL extractor</a> as the input feature.
+                        Two model structures are proposed for the genre taggings. We extract the highlight(HL) 30 seconds of each song by using <a href="https://transactions.ismir.net/articles/10.5334/tismir.14/">HL extractor</a> as the input feature.
                         <center><img src="img/genre_model1.png" class="model_img" style="width: 80%; "></center>
                         <p>Model [1] contains four convolution layers and two fully convolution layers for the final prediction. </p>
                         <center><img src="img/genre_model.png" class="model_img" style="width: 50%; "></center>
@@ -121,7 +121,7 @@
                 <section id="result" class="tm-content-box">
                     <div class='container pad'>
                         <h2>Result</h2>
-                        We only show the result of Jazz and EDM here.<br>
+                        We show the F1-score of Jazz and EDM prediction result. F1-score is calculated for each subgenre separately.<br>
                         <center>
                         <div style="display: inline-block;width: 45%;">
                             <center><p style="margin-top: 50px; ">EDM prediction result. </p></center>
